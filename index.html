@@ -15,11 +15,73 @@
 
 <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<link rel="stylesheet" href="style.css">
+
+
 </head>
 
 
 
 <body>
-    
+
+    <header>
+
+        <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+            <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+
+                <div class="flex items-center gap-2">
+                    <span class="text-lg font-bold">English</span>
+                    <img src="./assets/logo.png" alt="Logo" class="w-8 h-8">
+                    <span class="text-lg font-bold">জানালা</span>
+                </div>
+
+
+                <div class="flex space-x-4">
+                    <button onclick="Learn()"
+                        class="btn bg-white hover:bg-blue-600 text-black hover:text-white border-blue-800">FAQ</button>
+                        <button onclick="LearnSection()"
+                        class="btn bg-white hover:bg-blue-600 text-black hover:text-white border-blue-800">
+                        Learn
+                    </button>
+                    <button
+                        class="btn bg-white hover:bg-blue-600 text-black hover:text-white border-blue-800">Logout</button>
+                </div>
+            </div>
+        </nav>
+
+
+        <section class="mx-10 mt-20">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h1 class="text-4xl font-bold"><span class="text-[#00BCFF]">English</span> is Easy!!</h1>
+                    <p class="mt-4 text-gray-600">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা <br>
+                        আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে <br> যাবে অন্য একটি Level এ</p>
+                    <div class="mb-2 mt-4">
+                        <input type="text" name="name" placeholder="Enter Your Name"
+                            class="px-3 py-2 border border-gray-300 rounded-sm ">
+                    </div>
+                    <div>
+
+                        <input type="password" name="password" placeholder="enter login code (123456)"
+                            class="px-3 py-2 border border-gray-300 rounded-sm ">
+                    </div>
+                    <div class="mt-6">
+                        <button class="btn bg-[#422AD5] text-white hover:bg-blue-700">Get Started</button>
+                    </div>
+                </div>
+                <div><img class="w-[730px] h-[728px]" src="./assets/hero-student.png" alt=""></div>
+            </div>
+        </section>
+        
+        <!-- Title of start -->
+         <section>
+            <h1 class="text-4xl font-bold text-center mb-8"><span class="text-[#00BCFF]">Let's</span> Learn Vocabulary!!</h1>
+<!-- level container -->
+            <div id="level-container" class="flex gap-4 justify-center mb-5" ></div>
+         </section>
+    </header> 
+
+<script src="script.js"></script>
 </body>
 </html>
