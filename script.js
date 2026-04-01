@@ -5,7 +5,12 @@ const json = await res.json()
   
 }
 
-const showModals =async(id)=>{
+const synonym =(arr)=>{
+const showSynonym = arr.map(w=> `<span class='btn'>${w}</span>`).join('');
+return showSynonym;
+}
+
+const showModal =async(id)=>{
   const url = `https://openapi.programming-hero.com/api/word/${id}`
   const res = await fetch(url);
   const json = await res.json();
@@ -18,7 +23,38 @@ const wordDetails =(word)=>{
 const wordDetail = document.getElementById('detail');
 
 document.getElementById('my_modal_1').showModal()
+wordDetail.innerHTML =`
+  
+  <!-- Title -->
+  <h2 class="text-lg font-semibold text-gray-800">
+    ${word.word} <span class="text-gray-500 text-sm">${word.pronunciation}</span>
+  </h2>
 
+  <!-- Meaning -->
+  <div class="mt-4">
+    <p class="text-sm font-medium text-gray-700">Meaning</p>
+    <p class="text-gray-600 mt-1">${word.meaning}</p>
+  </div>
+
+  <!-- Example -->
+  <div class="mt-4">
+    <p class="text-sm font-medium text-gray-700">Example</p>
+    <p class="text-gray-600 mt-1">
+      ${word.sentence}
+    </p>
+  </div>
+
+  <!-- Synonyms -->
+  <div class="mt-4">
+    <p class="text-sm font-medium text-gray-700">সমার্থক শব্দ গুলো</p>
+    <div class="flex gap-2 mt-2 flex-wrap">
+     ${synonym(word.synonyms)}
+    </div>
+  </div>
+
+
+
+</div>`
 
 }
 
