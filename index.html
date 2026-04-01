@@ -73,7 +73,85 @@
 <section class="mt-6 mb-6 text-center font-bold text-2xl">
     <h1>Lets Learn Vocabulary</h1>
     <div  id="level-container" class="flex flex-wrap gap-2 justify-center mt-4 mb-4"></div>
+
 </section>
+
+<section> 
+<div id="card-container" class="w-11/12 my-10 mx-auto grid grid-cols-4 bg-blue-100 gap-4">
+  <!-- Empty State Placeholder -->
+  <div class="col-span-4 flex flex-col items-center justify-center py-20 bg-white border-2 border-dashed border-slate-300 rounded-xl">
+    
+    <!-- Animated/Soft Icon -->
+    <div class="mb-6 flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="Refined_Path M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+      </svg>
+    </div>
+
+    <!-- Text Content -->
+    <h1 class="text-2xl font-semibold text-slate-800 mb-2">একটি পাঠ নির্বাচন করুন</h1>
+    <p class="text-slate-500 font-medium">বিস্তারিত দেখতে একটি লেসন বাছাই করুন</p>
+    
+    <!-- Optional: Subtle call to action hint -->
+    <div class="mt-8 px-4 py-1.5 bg-slate-100 text-slate-600 text-xs font-bold uppercase tracking-widest rounded-full">
+      No Lesson Selected
+    </div>
+  </div>
+
+  <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+
+</div>
+
+    </div></section>
+    
+    <dialog id="my_modal_1" class="modal">
+  <div class="modal-box">
+   <div id="detail" class="w-[360px] bg-white border border-gray-200 rounded-xl shadow-sm p-5 font-sans">
+  
+  <!-- Title -->
+  <h2 class="text-lg font-semibold text-gray-800">
+    Eager <span class="text-gray-500 text-sm">(ইগার)</span>
+  </h2>
+
+  <!-- Meaning -->
+  <div class="mt-4">
+    <p class="text-sm font-medium text-gray-700">Meaning</p>
+    <p class="text-gray-600 mt-1">আগ্রহী</p>
+  </div>
+
+  <!-- Example -->
+  <div class="mt-4">
+    <p class="text-sm font-medium text-gray-700">Example</p>
+    <p class="text-gray-600 mt-1">
+      The kids were eager to open their gifts.
+    </p>
+  </div>
+
+  <!-- Synonyms -->
+  <div class="mt-4">
+    <p class="text-sm font-medium text-gray-700">সমার্থক শব্দ গুলো</p>
+    <div class="flex gap-2 mt-2 flex-wrap">
+      <span class="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-md">Enthusiastic</span>
+      <span class="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-md">excited</span>
+      <span class="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-md">keen</span>
+    </div>
+  </div>
+
+  <!-- Button -->
+  <button class="mt-5 w-full bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium py-2 rounded-lg">
+    Complete Learning
+  </button>
+
+</div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
 <body>
 
 
