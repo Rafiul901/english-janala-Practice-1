@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WordBoost</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-indigo-600">WordBoost</h1>
+      <ul class="hidden md:flex space-x-8 text-gray-700 font-medium">
+        <li class="hover:text-indigo-600 cursor-pointer">Home</li>
+        <li class="hover:text-indigo-600 cursor-pointer">Features</li>
+        <li class="hover:text-indigo-600 cursor-pointer">Practice</li>
+        <li class="hover:text-indigo-600 cursor-pointer">About</li>
+      </ul>
+      <button class="bg-indigo-600 text-white px-4 py-2 rounded-xl hover:bg-indigo-700 transition">Get Started</button>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <section class="bg-gradient-to-r from-indigo-900 to-purple-900 text-white">
+    <div class="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center">
+      
+      <!-- Text Content -->
+      <div class="md:w-1/2 space-y-6">
+        <h2 class="text-4xl md:text-5xl font-bold leading-tight">
+          Learn New Words <br> Faster & Smarter
+        </h2>
+        <p class="text-lg text-gray-200">
+          Build your vocabulary with interactive lessons, quizzes, and real-life examples. Make learning fun and effective.
+        </p>
+        <div class="space-x-4">
+          <button class="bg-white text-indigo-600 px-6 py-3 rounded-xl font-semibold hover:bg-gray-100 transition">
+            Start Learning
+          </button>
+          <button class="border border-white px-6 py-3 rounded-xl font-semibold hover:bg-white hover:text-indigo-600 transition">
+            Explore
+          </button>
+        </div>
+      </div>
+
+      <!-- Image / Illustration -->
+      <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" 
+             alt="Learning Illustration" 
+             class="w-80 drop-shadow-lg">
+      </div>
+
+    </div>
+  </section>
+  <section class="my-7 mx-auto ">
+<h1 class="text-xl font-bold text-center mb-5">Read the Words!</h1>
+<div id="word-container" class="mx-auto flex justify-center gap-3 flex-wrap"></div>
+  </section>
+<script src="script.js"></script>
+</body>
+</html>
