@@ -10,7 +10,7 @@ const wordLesson=(lessons)=>{
 
     for(const lesson of lessons){
         const btnDiv= document.createElement('div');
-        btnDiv.innerHTML=` <button class="bg-indigo-600 text-white font-bold px-4 py-2 rounded-xl hover:bg-indigo-700">${lesson.lessonName}</button>`;
+        btnDiv.innerHTML=` <button onclick=loadLevel(${lesson.level_no}) class="bg-indigo-600 text-white font-bold px-4 py-2 rounded-xl hover:bg-indigo-700">${lesson.lessonName}</button>`;
         wordContainer.append(btnDiv)
     }
 }
